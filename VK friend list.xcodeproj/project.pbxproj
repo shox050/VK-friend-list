@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1EAF6D4668FD72F2E806341F /* Pods_VK_friend_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */; };
 		E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17CB22BB38A900E583B4 /* AppDelegate.swift */; };
-		E75C17CE22BB38A900E583B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17CD22BB38A900E583B4 /* ViewController.swift */; };
+		E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17CD22BB38A900E583B4 /* LoginViewController.swift */; };
 		E75C17D122BB38A900E583B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75C17CF22BB38A900E583B4 /* Main.storyboard */; };
 		E75C17D322BB38AB00E583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75C17D222BB38AB00E583B4 /* Assets.xcassets */; };
 		E75C17D622BB38AB00E583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75C17D422BB38AB00E583B4 /* LaunchScreen.storyboard */; };
+		E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E022BB3C5C00E583B4 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +21,12 @@
 		C7DFB7EE81B72674B5C5056B /* Pods-VK friend list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK friend list.debug.xcconfig"; path = "Target Support Files/Pods-VK friend list/Pods-VK friend list.debug.xcconfig"; sourceTree = "<group>"; };
 		E75C17C822BB38A900E583B4 /* VK friend list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK friend list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75C17CB22BB38A900E583B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E75C17CD22BB38A900E583B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E75C17CD22BB38A900E583B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E75C17D022BB38A900E583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E75C17D222BB38AB00E583B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E75C17D522BB38AB00E583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E75C17D722BB38AB00E583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75C17E022BB3C5C00E583B4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,7 +48,6 @@
 				C7DFB7EE81B72674B5C5056B /* Pods-VK friend list.debug.xcconfig */,
 				844351EC4A0D2D54D8416D4A /* Pods-VK friend list.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,7 +100,8 @@
 		E75C17DE22BB38C400E583B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E75C17CD22BB38A900E583B4 /* ViewController.swift */,
+				E75C17CD22BB38A900E583B4 /* LoginViewController.swift */,
+				E75C17E022BB3C5C00E583B4 /* ListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,8 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75C17CE22BB38A900E583B4 /* ViewController.swift in Sources */,
+				E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */,
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,
+				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
