@@ -14,6 +14,9 @@
 		E75C17D322BB38AB00E583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75C17D222BB38AB00E583B4 /* Assets.xcassets */; };
 		E75C17D622BB38AB00E583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75C17D422BB38AB00E583B4 /* LaunchScreen.storyboard */; };
 		E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E022BB3C5C00E583B4 /* ListViewController.swift */; };
+		E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */; };
+		E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E522BC0C7200E583B4 /* NetworkService.swift */; };
+		E75C17E822BC161F00E583B4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C17E722BC161F00E583B4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		E75C17D522BB38AB00E583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E75C17D722BB38AB00E583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E75C17E022BB3C5C00E583B4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceConfiguration.swift; sourceTree = "<group>"; };
+		E75C17E522BC0C7200E583B4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E75C17E722BC161F00E583B4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75C17E822BC161F00E583B4 /* WebKit.framework in Frameworks */,
 				1EAF6D4668FD72F2E806341F /* Pods_VK_friend_list.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +61,7 @@
 		43AE653FBDB3450E57DBFF88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E75C17E722BC161F00E583B4 /* WebKit.framework */,
 				F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */,
 			);
 			name = Frameworks;
@@ -80,6 +88,7 @@
 		E75C17CA22BB38A900E583B4 /* VK friend list */ = {
 			isa = PBXGroup;
 			children = (
+				E75C17E222BC0A9A00E583B4 /* NetworkService */,
 				E75C17DD22BB38B900E583B4 /* Application */,
 				E75C17DE22BB38C400E583B4 /* Controllers */,
 				E75C17DF22BB38D200E583B4 /* Storyboard */,
@@ -113,6 +122,15 @@
 				E75C17D422BB38AB00E583B4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E75C17E222BC0A9A00E583B4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */,
+				E75C17E522BC0C7200E583B4 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */,
 				E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */,
+				E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */,
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 			);
