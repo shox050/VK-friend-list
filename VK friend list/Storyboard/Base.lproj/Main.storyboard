@@ -33,6 +33,7 @@
                     </view>
                     <connections>
                         <outlet property="wvLogin" destination="Dv1-JL-zUV" id="yWu-mZ-SgT"/>
+                        <segue destination="Op2-5e-jNO" kind="show" identifier="showFriendList" id="akH-Xd-SI9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahV-zc-rkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="139"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

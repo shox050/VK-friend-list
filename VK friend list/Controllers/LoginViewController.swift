@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     
     let networkService = NetworkService()
     
+    let identifier = Identifier()
+    
     var accessData = AccessData(token: "", userId: "")
     
     
@@ -77,6 +79,8 @@ extension LoginViewController: WKNavigationDelegate {
             }
             
             print("accessData: ", accessData)
+            
+            performSegue(withIdentifier: identifier.friendList, sender: self)
             
         }
         
