@@ -17,6 +17,8 @@
 		E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */; };
 		E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E522BC0C7200E583B4 /* NetworkService.swift */; };
 		E75C17E822BC161F00E583B4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C17E722BC161F00E583B4 /* WebKit.framework */; };
+		E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */; };
+		E7E475B322BC93E000B1C3D6 /* AccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B222BC93E000B1C3D6 /* AccessData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceConfiguration.swift; sourceTree = "<group>"; };
 		E75C17E522BC0C7200E583B4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E75C17E722BC161F00E583B4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E7E475B222BC93E000B1C3D6 /* AccessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessData.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 		E75C17CA22BB38A900E583B4 /* VK friend list */ = {
 			isa = PBXGroup;
 			children = (
+				E7E475B122BC93D300B1C3D6 /* Models */,
 				E75C17E222BC0A9A00E583B4 /* NetworkService */,
 				E75C17DD22BB38B900E583B4 /* Application */,
 				E75C17DE22BB38C400E583B4 /* Controllers */,
@@ -129,8 +134,17 @@
 			children = (
 				E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */,
 				E75C17E522BC0C7200E583B4 /* NetworkService.swift */,
+				E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		E7E475B122BC93D300B1C3D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7E475B222BC93E000B1C3D6 /* AccessData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E475B322BC93E000B1C3D6 /* AccessData.swift in Sources */,
 				E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */,
 				E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */,
 				E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */,
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,
+				E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

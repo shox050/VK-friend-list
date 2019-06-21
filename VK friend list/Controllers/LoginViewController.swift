@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     
     let networkService = NetworkService()
     
+    var accessData = AccessData(token: "", userId: "")
+    
     
     @IBOutlet private weak var wvLogin: WKWebView!
     
@@ -44,10 +46,38 @@ extension LoginViewController: WKNavigationDelegate {
             url.absoluteString.contains("access_token"),
             url.absoluteString.contains("user_id") {
             
-            var token = ""
-            var userId = 0
-            
             print(url)
+            
+            guard let query = url.absoluteString.components(separatedBy: "#").last else {
+                print("No query")
+                return
+            }
+            
+            print(query)
+            
+            query.components(separatedBy: "&").forEach {
+                
+                let pair = $0.components(separatedBy: "=")
+                
+                guard pair.count == 2 else {
+                    print("No pair")
+                    return
+                }
+                
+                guard let key = pair.first,
+                    let value = pair.last else {
+                        return
+                }
+                
+                if key == "access_token" {
+                    accessData.token = value
+                } else if key == "user_id" {
+                    accessData.userId = value
+                }
+            }
+            
+            print("accessData: ", accessData)
+            
         }
         
         decisionHandler(.allow)
