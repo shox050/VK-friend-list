@@ -20,9 +20,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var wvLogin: WKWebView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         let urlString = "https://oauth.vk.com/authorize?client_id=\(networkService.configuration.applicationId)&display=mobile&redirect_url=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=\(networkService.configuration.apiVersion)"
         
@@ -32,9 +34,9 @@ class LoginViewController: UIViewController {
         }
         
         wvLogin.navigationDelegate = self
-        
+
         let request = URLRequest(url: url)
-        
+
         wvLogin.load(request)
     }
 }
@@ -81,7 +83,6 @@ extension LoginViewController: WKNavigationDelegate {
             print("accessData: ", accessData)
             
             performSegue(withIdentifier: identifier.friendList, sender: self)
-            
         }
         
         decisionHandler(.allow)

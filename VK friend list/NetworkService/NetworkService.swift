@@ -6,9 +6,12 @@
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 
+import Foundation
 import Alamofire
 
 class NetworkService {
     
+    
     let configuration = NetworkServiceConfiguration()
+    
 }
