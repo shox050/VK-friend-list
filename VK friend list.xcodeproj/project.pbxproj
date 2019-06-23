@@ -21,6 +21,7 @@
 		E7E475B322BC93E000B1C3D6 /* AccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B222BC93E000B1C3D6 /* AccessData.swift */; };
 		E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B522BD666B00B1C3D6 /* Identifier.swift */; };
 		E7E475BC22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */; };
+		E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E7E475B222BC93E000B1C3D6 /* AccessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessData.swift; sourceTree = "<group>"; };
 		E7E475B522BD666B00B1C3D6 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorizationPathConfiguration.swift; sourceTree = "<group>"; };
+		E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 		E75C17CA22BB38A900E583B4 /* VK friend list */ = {
 			isa = PBXGroup;
 			children = (
+				E7E475BD22BE1CB700B1C3D6 /* Views */,
 				E7E475B422BD662D00B1C3D6 /* Source */,
 				E7E475B122BC93D300B1C3D6 /* Models */,
 				E75C17E222BC0A9A00E583B4 /* NetworkService */,
@@ -175,6 +178,14 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E7E475BD22BE1CB700B1C3D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */,
 				E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
+				E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
