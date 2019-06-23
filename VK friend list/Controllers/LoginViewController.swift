@@ -25,16 +25,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-//        let urlString = "https://oauth.vk.com/authorize?client_id=\(networkService.configuration.applicationId)&display=mobile&redirect_url=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=\(networkService.configuration.apiVersion)"
-//
-//        guard let url = URL(string: urlString) else {
-//            print("cant convert string to url")
-//            return
-//        }
         
         guard let url = autorizationPathConfiguration.url else {
-            print("URL cant created from the components")
+            print("url not received")
             return
         }
         
