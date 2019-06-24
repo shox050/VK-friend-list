@@ -1,12 +1,12 @@
 //
-//  Friend.swift
+//  User.swift
 //  VK friend list
 //
 //  Created by Vladimir on 23/06/2019.
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 
-struct Friend: Decodable {
+struct User: Decodable {
     let id: Int
     
     let name: String

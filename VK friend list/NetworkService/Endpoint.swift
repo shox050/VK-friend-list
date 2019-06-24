@@ -31,10 +31,9 @@ enum Endpoint: URLRequestConvertible {
     }
 }
 
-//extension Endpoint: URLConvertible {
-//
-//    func asURL() throws -> URL {
-//        return try asURLRequest().url!
-//    }
-//
-//}
+extension Endpoint: URLConvertible {
+
+    func asURL() throws -> URL {
+        return try asURLRequest().url!
+    }
+}

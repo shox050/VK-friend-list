@@ -22,7 +22,7 @@
 		E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B522BD666B00B1C3D6 /* Identifier.swift */; };
 		E7E475BC22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */; };
 		E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */; };
-		E7E475C222BF9F9400B1C3D6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C122BF9F9400B1C3D6 /* Friend.swift */; };
+		E7E475C222BF9F9400B1C3D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C122BF9F9400B1C3D6 /* User.swift */; };
 		E7E475C422BFAB5F00B1C3D6 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C322BFAB5F00B1C3D6 /* RequestResult.swift */; };
 		E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C522BFB8B300B1C3D6 /* RequestError.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 		E7E475B522BD666B00B1C3D6 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorizationPathConfiguration.swift; sourceTree = "<group>"; };
 		E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
-		E7E475C122BF9F9400B1C3D6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E7E475C122BF9F9400B1C3D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E7E475C322BFAB5F00B1C3D6 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		E7E475C522BFB8B300B1C3D6 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +200,7 @@
 		E7E475C022BF9E8200B1C3D6 /* Decode models */ = {
 			isa = PBXGroup;
 			children = (
-				E7E475C122BF9F9400B1C3D6 /* Friend.swift */,
+				E7E475C122BF9F9400B1C3D6 /* User.swift */,
 			);
 			path = "Decode models";
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 				E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */,
-				E7E475C222BF9F9400B1C3D6 /* Friend.swift in Sources */,
+				E7E475C222BF9F9400B1C3D6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

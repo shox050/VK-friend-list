@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     let identifier = Identifier()
     
-    var accessData = AccessData(token: "", userId: "")
+    var accessData = UserAccessData(token: "", userId: "")
     
     
     @IBOutlet private weak var wvLogin: WKWebView!

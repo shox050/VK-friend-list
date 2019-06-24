@@ -15,10 +15,17 @@ class NetworkService {
     
     let configuration = NetworkServiceConfiguration()
     
-    private func request(_ endpoint: Endpoint, method: HTTPMethod = .get, parameters: [String: Any]? = nil,
-                         encoding: ParameterEncoding, _ completion: @escaping (DataResponse<Data>) -> Void) {
+    
+    private func request(_ endpoint: Endpoint,
+                         method: HTTPMethod = .get,
+                         parameters: [String: Any]? = nil,
+                         encoding: ParameterEncoding,
+                         _ completion: @escaping (DataResponse<Data>) -> Void) {
         
-        AF.request(endpoint)
+        AF.request(endpoint,
+                   method: method,
+                   parameters: parameters,
+                   encoding: encoding)
             .validate()
             .responseData(queue: executionQueue) { response in
                 completion(response)
@@ -29,6 +36,16 @@ class NetworkService {
                        count: Int, responseType: T.Type,
                        _ completion: @escaping (RequestResult<T, RequestError>) -> Void) where T: Decodable {
         
+        let fields = "photo_100"
         
+        let parameters: [String: Any] = ["user_id": accessData.userId,
+                                         "order": "hints",
+                                         "count": count,
+                                         "offset": offset,
+                                         "fields": fields]
+        
+        request(.friends, parameters: parameters, encoding: URLEncoding.default) { response in
+            
+        }
     }
 }
