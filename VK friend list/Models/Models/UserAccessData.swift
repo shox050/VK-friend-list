@@ -6,7 +6,7 @@
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 
-struct AccessData {
+struct UserAccessData {
     var token: String
     
     var userId: String
