@@ -23,7 +23,6 @@
 		E7E475BC22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */; };
 		E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */; };
 		E7E475C222BF9F9400B1C3D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C122BF9F9400B1C3D6 /* User.swift */; };
-		E7E475C422BFAB5F00B1C3D6 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C322BFAB5F00B1C3D6 /* RequestResult.swift */; };
 		E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C522BFB8B300B1C3D6 /* RequestError.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorizationPathConfiguration.swift; sourceTree = "<group>"; };
 		E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E7E475C122BF9F9400B1C3D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E7E475C322BFAB5F00B1C3D6 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		E7E475C522BFB8B300B1C3D6 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,7 +148,6 @@
 				E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */,
 				E75C17E522BC0C7200E583B4 /* NetworkService.swift */,
 				E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */,
-				E7E475C322BFAB5F00B1C3D6 /* RequestResult.swift */,
 				E7E475C522BFB8B300B1C3D6 /* RequestError.swift */,
 			);
 			path = NetworkService;
@@ -159,7 +156,7 @@
 		E7E475B122BC93D300B1C3D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7E475C022BF9E8200B1C3D6 /* Decode models */,
+				E7E475C022BF9E8200B1C3D6 /* Codable models */,
 				E7E475B822BD701400B1C3D6 /* ViewModels */,
 				E7E475B722BD700900B1C3D6 /* Models */,
 			);
@@ -197,12 +194,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E7E475C022BF9E8200B1C3D6 /* Decode models */ = {
+		E7E475C022BF9E8200B1C3D6 /* Codable models */ = {
 			isa = PBXGroup;
 			children = (
 				E7E475C122BF9F9400B1C3D6 /* User.swift */,
 			);
-			path = "Decode models";
+			path = "Codable models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +323,6 @@
 				E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */,
 				E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */,
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,
-				E7E475C422BFAB5F00B1C3D6 /* RequestResult.swift in Sources */,
 				E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */,
 				E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */,
 				E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */,

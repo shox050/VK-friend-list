@@ -32,9 +32,9 @@ class NetworkService {
         }
     }
     
-    func getFriends<T>(forUser accessData: UserAccessData, withOffset offset: Int,
-                       count: Int, responseType: T.Type,
-                       _ completion: @escaping (RequestResult<T, RequestError>) -> Void) where T: Decodable {
+    func getFriends(forUser accessData: UserAccessData, withOffset offset: Int,
+                       count: Int,
+                       _ completion: @escaping (DataResponse<Data>) -> Void) {
         
         let fields = "photo_100"
         
