@@ -34,18 +34,36 @@ class NetworkService {
     
     func getFriends(forUser accessData: UserAccessData, withOffset offset: Int,
                        count: Int,
-                       _ completion: @escaping (DataResponse<Data>) -> Void) {
+                       _ completion: @escaping (UserResponse) -> Void) {
         
         let fields = "photo_100"
         
         let parameters: [String: Any] = ["user_id": accessData.userId,
+                                         "access_token": accessData.token,
                                          "order": "hints",
                                          "count": count,
                                          "offset": offset,
-                                         "fields": fields]
+                                         "fields": fields,
+                                         "v": configuration.apiVersion]
         
         request(.friends, parameters: parameters, encoding: URLEncoding.default) { response in
             
+            print("Response in getFriends: ", response.request)
+            
+            guard let responseData = response.data else {
+                print(RequestError.responseUnsuccessful)
+                return
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                let userResponse = try jsonDecoder.decode(UserResponse.self, from: responseData)
+                
+                completion(userResponse)
+            } catch let error {
+                print("\(RequestError.jsonParsingFailure): \(error.localizedDescription)")
+            }
         }
     }
 }

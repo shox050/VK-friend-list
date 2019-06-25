@@ -24,6 +24,7 @@
 		E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */; };
 		E7E475C222BF9F9400B1C3D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C122BF9F9400B1C3D6 /* User.swift */; };
 		E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C522BFB8B300B1C3D6 /* RequestError.swift */; };
+		E7E475C822C2916B00B1C3D6 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475C722C2916B00B1C3D6 /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E7E475BE22BE1CCF00B1C3D6 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E7E475C122BF9F9400B1C3D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E7E475C522BFB8B300B1C3D6 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		E7E475C722C2916B00B1C3D6 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		F97C11D59EE0F43133012A8D /* Pods_VK_friend_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_friend_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E7E475C122BF9F9400B1C3D6 /* User.swift */,
+				E7E475C722C2916B00B1C3D6 /* Friends.swift */,
 			);
 			path = "Codable models";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				E7E475BC22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift in Sources */,
 				E7E475B322BC93E000B1C3D6 /* UserAccessData.swift in Sources */,
 				E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */,
+				E7E475C822C2916B00B1C3D6 /* Friends.swift in Sources */,
 				E75C17CE22BB38A900E583B4 /* LoginViewController.swift in Sources */,
 				E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */,
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,

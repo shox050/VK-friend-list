@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     let identifier = Identifier()
     
-    var accessData = UserAccessData(token: "", userId: "")
+    var userAccessData = UserAccessData(token: "", userId: "")
     
     
     @IBOutlet private weak var wvLogin: WKWebView!
@@ -36,6 +36,14 @@ class LoginViewController: UIViewController {
         let request = URLRequest(url: url)
 
         wvLogin.load(request)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? ListViewController else {
+            return
+        }
+        
+        destinationVC.userAccessData = userAccessData
     }
 }
 
@@ -72,13 +80,13 @@ extension LoginViewController: WKNavigationDelegate {
                 }
                 
                 if key == "access_token" {
-                    accessData.token = value
+                    userAccessData.token = value
                 } else if key == "user_id" {
-                    accessData.userId = value
+                    userAccessData.userId = value
                 }
             }
             
-            print("accessData: ", accessData)
+            print("accessData: ", userAccessData)
             
             performSegue(withIdentifier: identifier.friendList, sender: self)
         }

@@ -6,6 +6,23 @@
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 
+struct UserResponse: Decodable {
+    let response: UserWrapper
+}
+
+struct UserWrapper: Decodable {
+    let count: Int
+    
+    let users: [User]
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case count
+        
+        case users = "items"
+    }
+}
+
 struct User: Decodable {
     let id: Int
     
