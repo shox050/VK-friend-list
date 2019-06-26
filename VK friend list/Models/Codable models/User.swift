@@ -6,6 +6,8 @@
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 
+import UIKit
+
 struct UserResponse: Decodable {
     let response: UserWrapper
 }
@@ -31,6 +33,8 @@ struct User: Decodable {
     let lastName: String
     
     let logoPath: String
+    
+    var logo: UIImage?
     
     
     private enum CodingKeys: String, CodingKey {

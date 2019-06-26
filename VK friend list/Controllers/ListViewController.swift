@@ -20,8 +20,10 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.getFriends(forUser: userAccessData, withOffset: 0, count: 1) { users in
+        networkService.getFriends(forUser: userAccessData, withOffset: 0, count: 1) { userResponse in
             print("WORK")
+            
+            
         }
     }
 }

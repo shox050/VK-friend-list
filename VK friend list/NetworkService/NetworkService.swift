@@ -34,7 +34,7 @@ class NetworkService {
     
     func getFriends(forUser accessData: UserAccessData, withOffset offset: Int,
                        count: Int,
-                       _ completion: @escaping (UserResponse) -> Void) {
+                       _ completion: @escaping (Result<UserResponse, RequestError>) -> Void) {
         
         let fields = "photo_100"
         
@@ -60,9 +60,11 @@ class NetworkService {
             do {
                 let userResponse = try jsonDecoder.decode(UserResponse.self, from: responseData)
                 
-                completion(userResponse)
+                completion(.success(userResponse))
             } catch let error {
                 print("\(RequestError.jsonParsingFailure): \(error.localizedDescription)")
+                
+                completion(.failure(.jsonParsingFailure))
             }
         }
     }
