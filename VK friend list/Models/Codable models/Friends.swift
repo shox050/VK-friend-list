@@ -15,7 +15,7 @@ struct Friends: Encodable {
     
     let order: String = "hints"
     
-    let count: Int
+    let count: Int?
     
     let offset: Int
     
