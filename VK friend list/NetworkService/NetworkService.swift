@@ -40,7 +40,9 @@ class NetworkService {
         
         let friends = Friends(userId: accessData.userId, token: accessData.token, count: count, offset: offset)
         
-        let parameters = dictionaryEncoder.encode(entity: friends)
+        var parameters = dictionaryEncoder.encode(entity: friends)
+        
+        parameters?["v"] = configuration.apiVersion
         
 //        let fields = "photo_100"
         
@@ -65,6 +67,8 @@ class NetworkService {
             
             do {
                 let userResponse = try jsonDecoder.decode(UserResponse.self, from: responseData)
+                
+                print("UserResponse parsing completed")
                 
                 completion(.success(userResponse))
             } catch let error {

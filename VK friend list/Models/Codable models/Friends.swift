@@ -25,7 +25,7 @@ struct Friends: Encodable {
     private enum CodingKeys: String, CodingKey {
         case userId
         
-        case token
+        case token = "access_token"
         
         case order
         
