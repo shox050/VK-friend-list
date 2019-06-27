@@ -22,7 +22,7 @@ struct Friends: Encodable {
     let fields: String = "photo_100"
     
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case userId
         
         case token

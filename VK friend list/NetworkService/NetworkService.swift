@@ -13,7 +13,9 @@ class NetworkService {
     
     private let executionQueue = DispatchQueue(label: "NetwrokServiceQueue", qos: .background, attributes: .concurrent)
     
-    let configuration = NetworkServiceConfiguration()
+    private let configuration = NetworkServiceConfiguration()
+    
+    private let dictionaryEncoder = DictionaryEncoder()
     
     
     private func request(_ endpoint: Endpoint,
@@ -36,15 +38,19 @@ class NetworkService {
                        count: Int,
                        _ completion: @escaping (Result<UserResponse, RequestError>) -> Void) {
         
-        let fields = "photo_100"
+        let friends = Friends(userId: accessData.userId, token: accessData.token, count: count, offset: offset)
         
-        let parameters: [String: Any] = ["user_id": accessData.userId,
-                                         "access_token": accessData.token,
-                                         "order": "hints",
-                                         "count": count,
-                                         "offset": offset,
-                                         "fields": fields,
-                                         "v": configuration.apiVersion]
+        let parameters = dictionaryEncoder.encode(entity: friends)
+        
+//        let fields = "photo_100"
+        
+//        let parameters: [String: Any] = ["user_id": accessData.userId,
+//                                         "access_token": accessData.token,
+//                                         "order": "hints",
+//                                         "count": count,
+//                                         "offset": offset,
+//                                         "fields": fields,
+//                                         "v": configuration.apiVersion]
         
         request(.friends, parameters: parameters, encoding: URLEncoding.default) { response in
             

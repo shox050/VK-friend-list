@@ -13,7 +13,7 @@ class ListViewController: UIViewController {
     private let networkService = NetworkService()
     
     var userAccessData: UserAccessData!
-    
+        
     
     let identifier = Identifier()
         
