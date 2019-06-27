@@ -24,7 +24,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.getFriends(forUser: userAccessData, withOffset: 0, count: 1) { [weak self] response in
+        networkService.getFriends(forUser: userAccessData, withOffset: 0) { [weak self] response in
             print("WORK")
             
             guard let self = self else { return }

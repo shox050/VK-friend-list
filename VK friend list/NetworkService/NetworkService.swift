@@ -35,7 +35,7 @@ class NetworkService {
     }
     
     func getFriends(forUser accessData: UserAccessData, withOffset offset: Int,
-                       count: Int,
+                       count: Int = 100,
                        _ completion: @escaping (Result<UserResponse, RequestError>) -> Void) {
         
         let friends = Friends(userId: accessData.userId,
@@ -70,6 +70,22 @@ class NetworkService {
                 
                 completion(.failure(.jsonParsingFailure))
             }
+        }
+    }
+    
+    func getLogo(forUser user: User, _ completion: @escaping (Result<Data, RequestError>) -> Void) {
+        
+        let path = user.logoPath
+        
+        AF.request(path).validate().response(queue: executionQueue) { response in
+            
+            guard let data = response.data else {
+                print(RequestError.requestFailed)
+                completion(.failure(.requestFailed))
+                return
+            }
+            
+            completion(.success(data))
         }
     }
 }
