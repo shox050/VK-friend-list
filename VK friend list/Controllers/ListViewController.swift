@@ -9,32 +9,24 @@
 import UIKit
 
 class ListViewController: UIViewController {
-    
-    private let networkService = NetworkService()
-    
-    private var listViewModel: ListViewModel!
-    
-    var userAccessData: UserAccessData!
-    
-    var users: [User] = []
         
+    var listViewModel = ListViewModel()
     
     let identifier = Identifier()
+    
         
+    @IBOutlet private weak var tvFriendList: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.getFriends(forUser: userAccessData, withOffset: 0) { [weak self] response in
-            print("WORK")
+        listViewModel.getFriends { [weak self] in
             
             guard let self = self else { return }
             
-            switch response {
-            case .success(let userResponse):
-                self.listViewModel = ListViewModel(userResponse)
-                
-            case .failure(let error):
-                print(error.localizedDescription)
+            DispatchQueue.main.sync {
+                self.tvFriendList.reloadData()
             }
         }
     }
@@ -44,8 +36,8 @@ class ListViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return listViewModel.count
-        return 5
+        
+        return listViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,9 +45,7 @@ extension ListViewController: UITableViewDataSource {
             return FriendCell()
         }
         
-//        let user = listViewModel.users[indexPath.row]
-//
-//        cell.configuration(with: user)
+        cell.configuration(with: listViewModel.users[indexPath.row])
         
         return cell
     }

@@ -14,18 +14,16 @@ class FriendCell: UITableViewCell {
     
     @IBOutlet private weak var lName: UILabel!
     
-    @IBOutlet private weak var lLastName: UILabel!
-
+    
 //    override func layoutSubviews() {
+//        ivLogo.layer.cornerRadius = bounds.size.width / 2
 //        ivLogo.layer.cornerRadius = frame.height / 2
-//        ivLogo.layer.masksToBounds = false
+//        ivLogo.layer.masksToBounds = true
 //    }
     
     func configuration(with user: User) {
         ivLogo.image = user.logo
         
-        lName.text = user.name
-        
-        lLastName.text = user.lastName
+        lName.text = ("\(user.name) \(user.lastName)")
     }
 }

@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        destinationVC.userAccessData = userAccessData
+        destinationVC.listViewModel.userAccessData = userAccessData
     }
 }
 
