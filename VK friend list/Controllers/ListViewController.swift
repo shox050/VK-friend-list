@@ -21,12 +21,28 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listViewModel.getFriends { [weak self] in
+        DispatchQueue.global(qos: .background).async { [weak self] in
             
             guard let self = self else { return }
             
-            DispatchQueue.main.sync {
-                self.tvFriendList.reloadData()
+            self.listViewModel.getFriends { [weak self] in
+                
+                guard let self = self else { return }
+                
+                DispatchQueue.main.sync {
+                    self.tvFriendList.reloadData()
+                }
+                
+                self.listViewModel.newUsers = self.listViewModel.users
+                
+                self.listViewModel.getLogo { index in
+                    
+                    let indexPath = IndexPath(row: index, section: 0)
+                                        
+                    DispatchQueue.main.sync {
+                        self.tvFriendList.reloadRows(at: [indexPath], with: .automatic)
+                    }
+                }
             }
         }
     }

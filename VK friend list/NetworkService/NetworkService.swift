@@ -35,7 +35,7 @@ class NetworkService {
     }
     
     func getFriends(forUser accessData: UserAccessData, withOffset offset: Int,
-                       count: Int = 100,
+                       count: Int = 5000,
                        _ completion: @escaping (Result<UserResponse, RequestError>) -> Void) {
         
         let friends = Friends(userId: accessData.userId,

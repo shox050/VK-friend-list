@@ -21,7 +21,7 @@ class ListViewModel {
     private let networkService = NetworkService()
     
     
-    func getFriends(_ complation: @escaping () -> Void) {
+    func getFriends(_ completion: @escaping () -> Void) {
         networkService.getFriends(forUser: userAccessData, withOffset: 0) { [weak self] response in
             print("WORK networkService.getFriends")
             
@@ -34,7 +34,7 @@ class ListViewModel {
                 self.users = userResponse.response.users
                 self.count = userResponse.response.count
                 
-                complation()
+                completion()
                 
             case .failure(let error):
                 print(error.localizedDescription)
@@ -42,9 +42,9 @@ class ListViewModel {
         }
     }
     
-    func getLogo(forUsers users: [User], _ completion: @escaping (Int) -> Void) {
+    func getLogo(_ completion: @escaping (Int) -> Void) {
         
-        users.forEach { user in
+        newUsers.forEach { user in
             networkService.getLogo(forUser: user) { [weak self] response in
                 
                 guard let self = self else { return }
