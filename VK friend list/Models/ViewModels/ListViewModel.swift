@@ -14,9 +14,9 @@ class ListViewModel {
     
     var users: [User] = []
     
-    private var newUsers: [User] = []
-    
     var totalUsersCount: Int = 0
+    
+    private var newUsers: [User] = []
     
     private var friendsCountInRequest = 50
     
@@ -29,7 +29,6 @@ class ListViewModel {
         networkService.getFriends(forUser: userAccessData,
                                   withOffset: users.count,
                                   count: friendsCountInRequest) { [weak self] response in
-            print("WORK networkService.getFriends")
             
             guard let this = self else { return }
                                     
@@ -41,10 +40,6 @@ class ListViewModel {
                 this.newUsers = userResponse.response.users
                 this.totalUsersCount = userResponse.response.count
                 
-                if this.totalUsersCount - this.users.count < this.friendsCountInRequest {
-                    this.friendsCountInRequest = this.totalUsersCount - this.users.count
-                }
-
                 completion()
                 
             case .failure(let error):
@@ -67,12 +62,16 @@ class ListViewModel {
                         return
                     }
                     
-                    
-                    
-                    if let index = this.users.firstIndex(where: { $0.id == user.id }) {
+                    this.executionQueue.async(flags: .barrier, execute: {
+                        
+                        guard let index = this.users.firstIndex(where: { $0.id == user.id }) else { return }
+                        
                         this.users[index].logo = logo
-                        completion(index)
-                    }
+                        
+                        DispatchQueue.global().async {
+                            completion(index)
+                        }
+                    })
                     
                 case .failure(let error):
                     print(RequestError.responseUnsuccessful, error.localizedDescription)

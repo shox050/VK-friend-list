@@ -24,8 +24,6 @@ struct AutorizationPathConfiguration {
                                     URLQueryItem(name: "response_type", value: "token"),
                                     URLQueryItem(name: "v", value: "\(networkConfiguration.apiVersion)")]
         
-//        print("urlComponents.url: ", urlComponents.url)
-        
         return urlComponents.url
     }
 }

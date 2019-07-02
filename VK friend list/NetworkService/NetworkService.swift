@@ -49,9 +49,7 @@ class NetworkService {
 
         
         request(.friends, parameters: parameters, encoding: URLEncoding.default) { response in
-            
-            print("Response in getFriends: ", response.request)
-            
+                        
             guard let responseData = response.data else {
                 print(RequestError.responseUnsuccessful)
                 return

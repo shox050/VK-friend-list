@@ -62,14 +62,12 @@ extension ListViewController: UITableViewDataSource {
         }
         
         
-        if indexPath.row == listViewModel.users.count - 10 {
+        if indexPath.row == listViewModel.users.count - 1 {
             if listViewModel.totalUsersCount > listViewModel.users.count {
                 getFriends()
             }
         }
 
-        
-        
         cell.configuration(with: listViewModel.users[indexPath.row])
         
         return cell

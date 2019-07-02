@@ -15,11 +15,9 @@ class FriendCell: UITableViewCell {
     @IBOutlet private weak var lName: UILabel!
     
     
-//    override func layoutSubviews() {
-//        ivLogo.layer.cornerRadius = bounds.size.width / 2
-//        ivLogo.layer.cornerRadius = frame.height / 2
-//        ivLogo.layer.masksToBounds = true
-//    }
+    override func layoutSubviews() {
+        ivLogo.layer.cornerRadius = ivLogo.frame.height / 2
+    }
     
     func configuration(with user: User) {
         ivLogo.image = user.logo

@@ -26,10 +26,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let url = autorizationPathConfiguration.url else {
-            print("url not received")
-            return
-        }
+        guard let url = autorizationPathConfiguration.url else { return }
         
         wvLogin.navigationDelegate = self
 
