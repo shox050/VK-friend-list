@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class NetworkService {
+class NetworkService: NetworkRequestable {
     
     private let executionQueue = DispatchQueue(label: "NetwrokServiceQueue", qos: .background, attributes: .concurrent)
     

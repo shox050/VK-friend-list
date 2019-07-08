@@ -18,6 +18,7 @@
 		E75C17E422BC0ADC00E583B4 /* NetworkServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */; };
 		E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E522BC0C7200E583B4 /* NetworkService.swift */; };
 		E75C17E822BC161F00E583B4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C17E722BC161F00E583B4 /* WebKit.framework */; };
+		E76D42E322D3D53A00B35C7B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76D42E222D3D53A00B35C7B /* NetworkRequestable.swift */; };
 		E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */; };
 		E7E475B322BC93E000B1C3D6 /* UserAccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B222BC93E000B1C3D6 /* UserAccessData.swift */; };
 		E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B522BD666B00B1C3D6 /* Identifier.swift */; };
@@ -44,6 +45,7 @@
 		E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceConfiguration.swift; sourceTree = "<group>"; };
 		E75C17E522BC0C7200E583B4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E75C17E722BC161F00E583B4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E76D42E222D3D53A00B35C7B /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E7E475B222BC93E000B1C3D6 /* UserAccessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessData.swift; sourceTree = "<group>"; };
 		E7E475B522BD666B00B1C3D6 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
@@ -151,13 +153,30 @@
 		E75C17E222BC0A9A00E583B4 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				E76D42E022D3D4E400B35C7B /* Definition */,
+				E76D42E122D3D4ED00B35C7B /* Implementation */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		E76D42E022D3D4E400B35C7B /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				E76D42E222D3D53A00B35C7B /* NetworkRequestable.swift */,
+			);
+			path = Definition;
+			sourceTree = "<group>";
+		};
+		E76D42E122D3D4ED00B35C7B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
 				E7E475BB22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift */,
 				E75C17E322BC0ADC00E583B4 /* NetworkServiceConfiguration.swift */,
 				E75C17E522BC0C7200E583B4 /* NetworkService.swift */,
 				E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */,
 				E7E475C522BFB8B300B1C3D6 /* RequestError.swift */,
 			);
-			path = NetworkService;
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		E7E475B122BC93D300B1C3D6 /* Models */ = {
@@ -344,6 +363,7 @@
 				E75C17CC22BB38A900E583B4 /* AppDelegate.swift in Sources */,
 				E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */,
 				E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */,
+				E76D42E322D3D53A00B35C7B /* NetworkRequestable.swift in Sources */,
 				E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 				E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */,

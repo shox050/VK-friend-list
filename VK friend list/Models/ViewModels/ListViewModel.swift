@@ -20,7 +20,7 @@ class ListViewModel {
     
     private var friendsCountInRequest = 50
     
-    private let networkService = NetworkService()
+    private let networkService: NetworkRequestable = NetworkService()
     
     private let executionQueue = DispatchQueue(label: "ListViewModelQueue", qos: .background, attributes: .concurrent)
     
