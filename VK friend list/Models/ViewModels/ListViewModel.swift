@@ -24,6 +24,10 @@ class ListViewModel {
     
     private let executionQueue = DispatchQueue(label: "ListViewModelQueue", qos: .background, attributes: .concurrent)
     
+    init(userAccessData: UserAccessData) {
+        self.userAccessData = userAccessData
+    }
+    
     func getFriends(_ completion: @escaping () -> Void) {
         
         networkService.getFriends(forUser: userAccessData,

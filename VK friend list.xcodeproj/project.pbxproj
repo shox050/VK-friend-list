@@ -19,6 +19,9 @@
 		E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75C17E522BC0C7200E583B4 /* NetworkService.swift */; };
 		E75C17E822BC161F00E583B4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C17E722BC161F00E583B4 /* WebKit.framework */; };
 		E76D42E322D3D53A00B35C7B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76D42E222D3D53A00B35C7B /* NetworkRequestable.swift */; };
+		E7C275F222D5A1B400FAC9B5 /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C275F122D5A1B400FAC9B5 /* FriendListController.swift */; };
+		E7C275F422D5A32500FAC9B5 /* FriendListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C275F322D5A32500FAC9B5 /* FriendListConfiguration.swift */; };
+		E7C275F622DAF98E00FAC9B5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C275F522DAF98E00FAC9B5 /* LoginController.swift */; };
 		E7E475B022BC8B9D00B1C3D6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */; };
 		E7E475B322BC93E000B1C3D6 /* UserAccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B222BC93E000B1C3D6 /* UserAccessData.swift */; };
 		E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E475B522BD666B00B1C3D6 /* Identifier.swift */; };
@@ -46,6 +49,9 @@
 		E75C17E522BC0C7200E583B4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E75C17E722BC161F00E583B4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E76D42E222D3D53A00B35C7B /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		E7C275F122D5A1B400FAC9B5 /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
+		E7C275F322D5A32500FAC9B5 /* FriendListConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListConfiguration.swift; sourceTree = "<group>"; };
+		E7C275F522DAF98E00FAC9B5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E7E475AF22BC8B9D00B1C3D6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E7E475B222BC93E000B1C3D6 /* UserAccessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessData.swift; sourceTree = "<group>"; };
 		E7E475B522BD666B00B1C3D6 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
@@ -135,8 +141,8 @@
 		E75C17DE22BB38C400E583B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E75C17CD22BB38A900E583B4 /* LoginViewController.swift */,
-				E75C17E022BB3C5C00E583B4 /* ListViewController.swift */,
+				E7C275F022D5A18F00FAC9B5 /* Definition */,
+				E7C275EF22D5A17E00FAC9B5 /* Implementation */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +183,25 @@
 				E7E475C522BFB8B300B1C3D6 /* RequestError.swift */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		E7C275EF22D5A17E00FAC9B5 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				E75C17CD22BB38A900E583B4 /* LoginViewController.swift */,
+				E75C17E022BB3C5C00E583B4 /* ListViewController.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		E7C275F022D5A18F00FAC9B5 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				E7C275F322D5A32500FAC9B5 /* FriendListConfiguration.swift */,
+				E7C275F122D5A1B400FAC9B5 /* FriendListController.swift */,
+				E7C275F522DAF98E00FAC9B5 /* LoginController.swift */,
+			);
+			path = Definition;
 			sourceTree = "<group>";
 		};
 		E7E475B122BC93D300B1C3D6 /* Models */ = {
@@ -353,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C275F622DAF98E00FAC9B5 /* LoginController.swift in Sources */,
 				E7E475BC22BE184A00B1C3D6 /* AutorizationPathConfiguration.swift in Sources */,
 				E7E475B322BC93E000B1C3D6 /* UserAccessData.swift in Sources */,
 				E75C17E622BC0C7200E583B4 /* NetworkService.swift in Sources */,
@@ -365,9 +391,11 @@
 				E7E475B622BD666B00B1C3D6 /* Identifier.swift in Sources */,
 				E76D42E322D3D53A00B35C7B /* NetworkRequestable.swift in Sources */,
 				E7E475C622BFB8B300B1C3D6 /* RequestError.swift in Sources */,
+				E7C275F222D5A1B400FAC9B5 /* FriendListController.swift in Sources */,
 				E75C17E122BB3C5C00E583B4 /* ListViewController.swift in Sources */,
 				E7E475BF22BE1CCF00B1C3D6 /* FriendCell.swift in Sources */,
 				E7E475CC22C4009200B1C3D6 /* DictionaryEncoder.swift in Sources */,
+				E7C275F422D5A32500FAC9B5 /* FriendListConfiguration.swift in Sources */,
 				E7E475C222BF9F9400B1C3D6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

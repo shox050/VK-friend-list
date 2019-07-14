@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginController {
     
     let autorizationPathConfiguration = AutorizationPathConfiguration()
     
@@ -17,7 +17,9 @@ class LoginViewController: UIViewController {
     
     let identifier = Identifier()
     
-    var userAccessData = UserAccessData(token: "", userId: "")
+    var friendListConfiguration: FriendListConfiguration?
+    
+    private var userAccessData = UserAccessData(token: "", userId: "")
     
     
     @IBOutlet private weak var wvLogin: WKWebView!
@@ -36,11 +38,17 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? ListViewController else {
+        guard let destinationVC = segue.destination as? FriendListController else {
             return
         }
         
-        destinationVC.listViewModel.userAccessData = userAccessData
+        guard let friendListConfiguration = friendListConfiguration else {
+            fatalError("friendsListConfiguration` must be set prior to `FriendsListController` presentation")
+        }
+        
+        destinationVC.configure(with: friendListConfiguration)
+        self.friendListConfiguration = nil
+        
     }
 }
 
@@ -84,6 +92,8 @@ extension LoginViewController: WKNavigationDelegate {
             }
             
             print("accessData: ", userAccessData)
+            
+            friendListConfiguration = FriendListConfiguration(userAccessData: userAccessData)
             
             performSegue(withIdentifier: identifier.friendList, sender: self)
         }

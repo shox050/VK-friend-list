@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, FriendListController {
         
-    var listViewModel = ListViewModel()
+    fileprivate var listViewModel: ListViewModel?
     
     let identifier = Identifier()
     
@@ -25,17 +25,23 @@ class ListViewController: UIViewController {
 
     }
     
+    func configure(with configuration: FriendListConfiguration) {
+        listViewModel = ListViewModel(userAccessData: configuration.userAccessData)
+    }
+    
     private func getFriends() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
             
-            self.listViewModel.getFriends {
+            guard let listViewModel = self.listViewModel else { return }
+            
+            listViewModel.getFriends {
                 
                 DispatchQueue.main.sync {
                     self.tvFriendList.reloadData()
                 }
                 
-                self.listViewModel.getLogo { index in
+                listViewModel.getLogo { index in
                     
                     let indexPath = IndexPath(row: index, section: 0)
                     
@@ -53,14 +59,14 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return listViewModel.users.count
+        return listViewModel?.users.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier.cell) as? FriendCell else {
-            return FriendCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier.cell) as? FriendCell,
+            let listViewModel = listViewModel else {
+                return FriendCell()
         }
-        
         
         if indexPath.row == listViewModel.users.count - 1 {
             if listViewModel.totalUsersCount > listViewModel.users.count {
