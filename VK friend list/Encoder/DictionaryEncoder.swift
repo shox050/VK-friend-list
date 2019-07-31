@@ -17,6 +17,8 @@ class DictionaryEncoder {
             return nil
         }
         
+        print("Test")
+        
         return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]
     }
 }
